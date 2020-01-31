@@ -66,7 +66,7 @@ for (let i  = 0; i < gatos.length; i++) {
         contenidoModal = 
             `<div class="modal" id="myModal">
             <div class="cardModal">
-                <div class="imagenModal"><img src="${gatos[i].img}"></img></div>
+<div class="imagenModal"><img src="${gatos[i].img}"></img></div>
                 <div class="textoModal">
 <h2>${gatos[i].shortDesc}</h2>
 <p>${gatos[i].longDesc}</p>
@@ -79,12 +79,13 @@ for (let i  = 0; i < gatos.length; i++) {
     }   
 }
 
-const botonCerrarModal = document.getElemenstByClassName("cerrarModal");
+const botonCerrarModal = document.getElementsByClassName("cerrarModal");
 
 console.log(botonCerrarModal)
     
 for (let i = 0; i < gatos.length; i++) {
 botonCerrarModal[i].onclick = () => {
-    modal.classList.add('noMostrar');
+console.log("hice click")
+modal.classList.add('noMostrar');
 }
 }
