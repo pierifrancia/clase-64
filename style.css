@@ -1,0 +1,120 @@
+body {
+  margin: 0; }
+
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: #1a75bc;
+  padding: 10px 20px;
+  margin-bottom: 25px; }
+  nav h2 {
+    font-family: verdana;
+    font-size: 18px;
+    font-weight: 200;
+    color: #fff; }
+
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 20%; }
+
+.mainText {
+  width: 40%;
+  height: 400px;
+  background-color: #F9B415;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  font-family: verdana;
+  font-weight: 200;
+  box-sizing: border-box; }
+  .mainText h1 {
+    font-size: 25px;
+    color: #1a75bc; }
+  .mainText h3 {
+    font-size: 17px;
+    color: #444; }
+  .mainText p {
+    font-size: 13px; }
+
+.mainImg {
+  width: 40%;
+  height: 400px;
+  overflow: hidden; }
+  .mainImg img {
+    height: auto;
+    width: 100%; }
+
+.todasLasCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px; }
+
+.card {
+  width: 400px;
+  height: 200px;
+  background-color: #1a75bc;
+  color: #fff;
+  display: flex;
+  font-family: verdana;
+  margin: 25px;
+  box-sizing: border-box;
+  transition: all 0.4s; }
+  .card .imagen {
+    width: 200px;
+    height: 200px;
+    overflow: hidden; }
+    .card .imagen img {
+      width: 100%;
+      transition: all 1s; }
+  .card .texto {
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box; }
+    .card .texto h2 {
+      font-size: 16px; }
+    .card .texto p {
+      font-size: 12px; }
+    .card .texto .abrirModal {
+      display: flex;
+      justify-content: flex-start; }
+      .card .texto .abrirModal button {
+        width: 80px;
+        padding: 3px;
+        border: 0px;
+        background-color: #2e519a;
+        color: #FFF;
+        font-family: tahoma;
+        font-size: 11px;
+        border-radius: 5px;
+        margin-top: 5px; }
+
+.card:hover {
+  background-color: #FA9D26;
+  color: #000; }
+
+.card:hover img {
+  transform: scale(1.1); }
+
+.card:hover .abrirModal button {
+  background-color: #DC6700; }
+
+.modal {
+  width: 800px;
+  height: 600px;
+  background-color: #fff;
+  box-shadow: 10px 14px 18px -1px rgba(122, 122, 122, 0.49);
+  margin: 25%;
+  position: fixed;
+  top: 0px;
+  margin-top: 5%; }
+
+.noMostrar {
+  display: none; }
+
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #F9B415; }
