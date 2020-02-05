@@ -59,7 +59,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    margin: 15px 20% 15px 20%;
     
   }
   
@@ -92,10 +92,11 @@ body {
       p {
         font-size: 12px;
       }
-      .abrirModal {
+      }
+      .botonVerMas {
         display: flex;
         justify-content: flex-start;
-        button {
+        .abrirModal {
         width: 80px;
         padding: 3px;
         border: 0px;
@@ -106,8 +107,6 @@ body {
         border-radius: 5px; 
         margin-top: 5px;
       }
-      }
-      
     }
   }
   
@@ -120,25 +119,67 @@ body {
     img {
         transform : scale(1.1);
         }
-    .abrirModal {
-      button {background-color: #DC6700;
     }
-    }
-  }
+
   
   .modal {
     width: 800px;
-    height: 600px;
+    height: 400px;
     background-color: #fff; 
     box-shadow: 10px 14px 18px -1px rgba(122,122,122,0.49);
-    margin: 25%;
-    position: absolute;
-    top: 0px;
-    margin-top: 5%;
-    .imagenModal {
+    margin-right: 25%;
+    margin-left: 25%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 150px;
+    padding: 15px;
+    .cardModal {
+      display: flex;
+      padding: 15px;
+      box-sizing: box-border;
     
+    .imagenModal {
+    width: 300px;
+    height: 300px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
+      .textoModal {
+        padding: 0 15px 0 15px;
+        width: 300px;
+        height: 300px;
+        font-family: verdana;
+        h2 {
+      font-size: 25px;
+          color: #2e519a;
+        }
+        h3 {
+          font-size: 15px;
+        }
+        p {
+          font-size: 13px;
+        }
+    }
+        .cerrarModal {
+        width: 25px;
+         height: 25px;
+        padding: 3px;
+        border: 0px;
+        background-color: #2e519a;
+        color: #FFF;
+        font-family: tahoma;
+        font-size: 16px;
+        border-radius: 5px; 
+        margin-top: 5px;
+      }  
+   }
   }
+
   
   .noMostrar {
     display: none;
@@ -149,6 +190,3 @@ body {
     height: 150px;
     background-color: #F9B415;
   }
-  
-
- 
