@@ -77,8 +77,23 @@ for (let i  = 0; i < gatos.length; i++) {
         modal.classList.remove('noMostrar')
         
           const botonCerrarModal = document.getElementsByClassName("cerrarModal");
+<<<<<<< HEAD
 
 console.log(botonCerrarModal);
+=======
+
+console.log(botonCerrarModal);
+
+for (let i = 0; i < gatos.length; i++) {
+botonCerrarModal[i].onclick = () => {
+  
+console.log("hice click")
+modal.classList.add('noMostrar');
+}
+}
+    }   
+}
+>>>>>>> fa9afe748e112cfbe39179fd58cdabdf637b4ccb
 
 for (let i = 0; i < gatos.length; i++) {
 botonCerrarModal[i].onclick = () => {
