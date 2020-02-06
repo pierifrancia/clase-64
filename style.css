@@ -1,40 +1,43 @@
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: #F2D283;
+  font-family: verdana; }
 
 nav {
   width: 100%;
   height: 50px;
-  background-color: #1a75bc;
+  background-color: #DF6C1B;
+  color: #FFF;
+  font-family: verdana;
   padding: 10px 20px;
   margin-bottom: 25px; }
   nav h2 {
-    font-family: verdana;
     font-size: 18px;
-    font-weight: 200;
+    font-weight: bold;
     color: #fff; }
 
 .main {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 20%; }
+  height: 20%;
+  margin: 70px 0 70px 0; }
 
 .mainText {
   width: 40%;
   height: 400px;
-  background-color: #F9B415;
+  background-color: #8B7A85;
+  color: #FFF;
+  font-family: verdana;
   display: flex;
   flex-direction: column;
   padding: 50px;
-  font-family: verdana;
   font-weight: 200;
   box-sizing: border-box; }
   .mainText h1 {
-    font-size: 25px;
-    color: #1a75bc; }
+    font-size: 25px; }
   .mainText h3 {
-    font-size: 17px;
-    color: #444; }
+    font-size: 17px; }
   .mainText p {
     font-size: 13px; }
 
@@ -43,22 +46,41 @@ nav {
   height: 400px;
   overflow: hidden; }
   .mainImg img {
+    width: 100%;
     height: auto;
-    width: 100%; }
+    background-size: cover;
+    position: relative;
+    top: -50%; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+  margin: 20px;
+  font-family: verdana;
+  font-size: 12px;
+  font-weight: 300; }
+  form fieldset {
+    border: none;
+    margin: 10px; }
+    form fieldset legend {
+      margin: 5px 0 5px 0;
+      font-weight: bold; }
 
 .todasLasCards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px; }
+  margin: 15px 15% 15px 15%; }
 
 .card {
   width: 400px;
   height: 200px;
-  background-color: #1a75bc;
-  color: #fff;
-  display: flex;
+  background-color: #F0EECE;
+  color: #8B7A85;
   font-family: verdana;
+  display: flex;
   margin: 25px;
   box-sizing: border-box;
   transition: all 0.4s; }
@@ -77,39 +99,81 @@ nav {
       font-size: 16px; }
     .card .texto p {
       font-size: 12px; }
-    .card .texto .abrirModal {
-      display: flex;
-      justify-content: flex-start; }
-      .card .texto .abrirModal button {
-        width: 80px;
-        padding: 3px;
-        border: 0px;
-        background-color: #2e519a;
-        color: #FFF;
-        font-family: tahoma;
-        font-size: 11px;
-        border-radius: 5px;
-        margin-top: 5px; }
+  .card .botonVerMas {
+    display: flex;
+    justify-content: flex-start; }
+    .card .botonVerMas .abrirModal {
+      width: 80px;
+      padding: 3px;
+      border: 0px;
+      background-color: #DF6C1B;
+      color: #FFF;
+      font-family: verdana;
+      font-size: 11px;
+      border-radius: 5px;
+      margin-top: 5px; }
 
 .card:hover {
-  background-color: #FA9D26;
-  color: #000; }
+  background-color: #DF6C1B;
+  color: #FFF;
+  font-family: verdana; }
+  .card:hover .abrirModal {
+    background-color: #F0EECE;
+    color: #8B7A85;
+    font-family: verdana; }
 
 .card:hover img {
   transform: scale(1.1); }
 
-.card:hover .abrirModal button {
-  background-color: #DC6700; }
-
 .modal {
   width: 800px;
-  height: 600px;
-  background-color: #fff;
+  height: 400px;
+  background-color: #FFF;
   box-shadow: 10px 14px 18px -1px rgba(122, 122, 122, 0.49);
-  margin: 25%;
+  margin-right: 25%;
+  margin-left: 25%;
   position: fixed;
-  top: 0px;
-  margin-top: 5%; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 150px;
+  padding: 15px; }
+  .modal .cardModal {
+    display: flex;
+    padding: 15px;
+    box-sizing: box-border; }
+    .modal .cardModal .imagenModal {
+      width: 300px;
+      height: 300px; }
+      .modal .cardModal .imagenModal img {
+        width: 100%;
+        height: 100%; }
+    .modal .cardModal .textoModal {
+      padding: 0 15px 0 15px;
+      width: 300px;
+      height: 300px;
+      font-family: verdana; }
+      .modal .cardModal .textoModal h2 {
+        font-size: 25px;
+        color: #8B7A85; }
+      .modal .cardModal .textoModal h3 {
+        font-size: 15px;
+        color: #DF6C1B; }
+      .modal .cardModal .textoModal p {
+        font-size: 13px;
+        color: #000; }
+    .modal .cardModal .cerrarModal {
+      width: 25px;
+      height: 25px;
+      padding: 3px;
+      border: 0px;
+      background-color: #FFF;
+      color: #000;
+      border: 1px solid #000;
+      font-family: tahoma;
+      font-size: 16px;
+      margin-top: 5px; }
 
 .noMostrar {
   display: none; }
@@ -117,4 +181,6 @@ nav {
 footer {
   width: 100%;
   height: 150px;
-  background-color: #F9B415; }
+  background-color: #DF6C1B;
+  color: #FFF;
+  font-family: verdana; }

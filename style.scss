@@ -1,16 +1,41 @@
+@mixin principal-color {
+  background-color: #DF6C1B;
+  color: #FFF;
+  font-family: verdana;
+}
+
+@mixin secondary-color {
+  background-color: #F0EECE;
+  color: #8B7A85;
+  font-family: verdana;
+}
+
+@mixin tertiary-color {
+  background-color: #8B7A85;
+  color: #FFF;
+  font-family: verdana;
+}
+
+@mixin font-form {
+  font-family: verdana;
+  font-size: 12px;
+  font-weight: 300;
+}
+
 body {
-    margin: 0;
+  margin: 0;
+  background-color: #F2D283;
+  font-family: verdana;
   }
   nav {
     width: 100%;
     height: 50px;
-    background-color: #1a75bc;
+    @include principal-color;
     padding: 10px 20px;
     margin-bottom: 25px;
     h2 {
-      font-family: verdana;
       font-size: 18px;
-      font-weight: 200;
+      font-weight: bold;
       color: #fff;
     }
   }
@@ -20,25 +45,23 @@ body {
     justify-content: center;
     width: 100%;
     height: 20%;
+    margin: 70px 0 70px 0;
   }
   
   .mainText {
     width: 40%;
     height: 400px;
-    background-color: #F9B415;
+    @include tertiary-color;
     display: flex;
     flex-direction: column;
     padding: 50px;
-    font-family: verdana;
     font-weight: 200;
     box-sizing:border-box;
     h1 {
      font-size: 25px; 
-     color: #1a75bc;
     } 
     h3 {
      font-size: 17px; 
-     color: #444
     }
     p {
      font-size: 13px; 
@@ -50,26 +73,45 @@ body {
     height: 400px; 
     overflow: hidden;
     img {
-      height: auto;
       width: 100%;
+       height: auto;
+      background-size: cover;
+      position: relative;
+    top: -50%;
     }
   }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   text-align: start;
+  margin: 20px;
+  @include font-form;
+    fieldset {
+    border: none;
+      margin: 10px;
+      legend {
+        margin: 5px 0 5px 0;
+        font-weight: bold;
+      }
+  }
+
+}
   
   .todasLasCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    margin: 15px 15% 15px 15%;
     
   }
   
   .card {
     width: 400px;
     height: 200px;
-    background-color: #1a75bc;
-    color: #fff;
+    @include secondary-color;
     display: flex;
-    font-family: verdana;
     margin: 25px;
     box-sizing:border-box;
     transition: all 0.4s;
@@ -92,53 +134,96 @@ body {
       p {
         font-size: 12px;
       }
-      .abrirModal {
+      }
+      .botonVerMas {
         display: flex;
         justify-content: flex-start;
-        button {
+        .abrirModal {
         width: 80px;
         padding: 3px;
         border: 0px;
-        background-color: #2e519a;
-        color: #FFF;
-        font-family: tahoma;
+        @include principal-color;
         font-size: 11px;
         border-radius: 5px; 
         margin-top: 5px;
       }
-      }
-      
     }
   }
   
   .card:hover {
-    background-color: #FA9D26;
-    color: #000
+    @include principal-color;
+    .abrirModal {
+      @include secondary-color;
+    }
   }
   
   .card:hover {
     img {
         transform : scale(1.1);
         }
-    .abrirModal {
-      button {background-color: #DC6700;
     }
-    }
-  }
+
   
   .modal {
     width: 800px;
-    height: 600px;
-    background-color: #fff; 
+    height: 400px;
+    background-color: #FFF; 
     box-shadow: 10px 14px 18px -1px rgba(122,122,122,0.49);
-    margin: 25%;
+    margin-right: 25%;
+    margin-left: 25%;
     position: fixed;
-    top: 0px;
-    margin-top: 5%;
-    .imagenModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 150px;
+    padding: 15px;
+    .cardModal {
+      display: flex;
+      padding: 15px;
+      box-sizing: box-border;
     
+    .imagenModal {
+    width: 300px;
+    height: 300px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
+      .textoModal {
+        padding: 0 15px 0 15px;
+        width: 300px;
+        height: 300px;
+        font-family: verdana;
+        h2 {
+      font-size: 25px;
+          color: #8B7A85;
+        }
+        h3 {
+          font-size: 15px;
+          color: #DF6C1B;
+        }
+        p {
+          font-size: 13px;
+          color: #000;
+        }
+    }
+        .cerrarModal {
+        width: 25px;
+        height: 25px;
+        padding: 3px;
+        border: 0px;
+        background-color: #FFF;
+        color: #000;
+        border: 1px solid #000;
+        font-family: tahoma;
+        font-size: 16px;
+        margin-top: 5px;
+      }  
+   }
   }
+
   
   .noMostrar {
     display: none;
@@ -147,8 +232,5 @@ body {
   footer {
     width: 100%;
     height: 150px;
-    background-color: #F9B415;
+    @include principal-color;
   }
-  
-
- 

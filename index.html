@@ -12,7 +12,7 @@
 <body>
 
     <nav>
-        <h2>#Adoptadas</h2>
+        <h2>#AdoptAdas</h2>
     </nav>
 
     <div class="main">
@@ -25,17 +25,45 @@
                 expedita ea possimus mollitia consectetur voluptate maiores eligendi porro esse?</p>
         </div>
         <div class="mainImg">
-            <img src="https://live.staticflickr.com/51/168638725_4004146a60_b.jpg"></img>
+            <img src="https://images.unsplash.com/photo-1548681528-6a5c45b66b42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80"></img>
         </div>
     </div>
+
+  <form action="/adoption.php">
+    
+   <fieldset class="form-datos">
+<legend>Completá con tus datos:</legend>
+   <label for="nombre">Nombre:</label>
+     <input type="text" name="name">
+   <label for="telephone">Teléfono:</label> <input type="number" name="telephone"> <br>
+  </fieldset>  
+  
+    <fieldset class="form-color">
+ <legend>Elegí las opciones que quieras:</legend>
+  <input type="checkbox" name="color" value="Blanco"> Blanco
+    <input type="checkbox" name="color" value="Negro"> Negro
+    <input type="checkbox" name="color" value="Gris"> Gris
+    <input type="checkbox" name="color" value="Naranja"> Naranja
+      <input type="checkbox" name="color" value="Amarillo"> Amarillo
+    <input type="checkbox" name="color" value="Rayado"> Rayado <br>
+      </fieldset>
+
+<fieldset class="form-sex"> 
+    <input type="radio" name="sex" value="Masculino"> Masculino
+  <input type="radio" name="sex" value="Femenino"> Femenino
+  <input type="radio" name="sex" value="Indiferente" checked> Indiferente <br>
+ </fieldset>
+    
+<input type="submit" value="Enviar">
+</form> 
+
 
     <div class="todasLasCards">
         <div class="card">
             <div class="imagen"> </div>
             <div class="texto">
                 <h2 class="shortDesc"></h2>
-                <p class="longDesc"></p>
-                <div><button id="abrirModal">VER MAS</button></div>
+                <div><button class="abrirModal">VER MAS</button></div>
             </div>
         </div>
     </div>
@@ -44,7 +72,7 @@
         <div class="cardModal">
             <div class="imagenModal"></div>
             <div class="textoModal"></div>
-            <div><button id="cerrarModal">CERRAR</button></div>
+            <div><button class="cerrarModal">CERRAR</button></div>
         </div>
     </div>
 

@@ -47,7 +47,7 @@ for (let i = 0; i < gatos.length; i++) {
       <div class="texto">
       <h2 class="name"> ${gatos[i].name}</h2>
       <p class="shortDesc"> ${gatos[i].shortDesc} </p>
-    <div class="abrirModal"><button id="abrirModal">VER MÁS</button> </div>
+    <div class="botonVerMas"><button class="abrirModal">VER MÁS</button> </div>
       </div>
     </div>`
 }
@@ -55,39 +55,36 @@ for (let i = 0; i < gatos.length; i++) {
 cards.innerHTML = contenidoCards
 
 
-const botonAbrirModal = document.getElementById("abrirModal");
-const botonCerrarModal = document.getElementById("cerrarModal")
+const botonAbrirModal = document.getElementsByClassName("abrirModal");
+
 const modal = document.getElementById("myModal");
 let contenidoModal = document.getElementsByClassName("cardModal");
 
-console.log(botonAbrirModal)
 
-console.log(modal)
-
-console.log(contenidoModal)
-
-for (let i  = 0; i < botonAbrirModal.length; i++) {
+for (let i  = 0; i < gatos.length; i++) {
         botonAbrirModal[i].onclick = () => {
         contenidoModal = 
-            `<div class="modal noMostrar" id="myModal">
-            <div class="cardModal">
-                <div class="imagenModal"><img src="${gatos[i].img}"></img></div>
-                <div class="textoModal"></div>
-                <div><button id="cerrarModal">CERRAR</button></div>
-            </div>
+            `<div class="cardModal">
+<div class="imagenModal"><img src="${gatos[i].img}"></img></div>
+<div class="textoModal">
+<h2>${gatos[i].name}</h2>
+<h3>${gatos[i].shortDesc}</h3>
+<p>${gatos[i].longDesc}</p>
+</div>
+<div class="botonCerrar"><button class="cerrarModal">X</button></div>
         </div>`
         modal.innerHTML = contenidoModal
         modal.classList.remove('noMostrar')
-    }   
+        
+          const botonCerrarModal = document.getElementsByClassName("cerrarModal");
+
+console.log(botonCerrarModal);
+
+for (let i = 0; i < gatos.length; i++) {
+botonCerrarModal[i].onclick = () => {
+modal.classList.add('noMostrar');
 }
-
-    
-botonCerrarModal.onclick = () => {
-    modal.classList.add('noMostrar')
 }
-
-
-
-
-
+}   
+}
 
